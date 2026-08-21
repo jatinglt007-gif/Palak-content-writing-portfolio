@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Palak Gulati | Content Writer & Learning Content Designer</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Palak Gulati — Content Writer, Learning Content Designer and Research Writer."
+    >
+
+    <style>
+
+        /* =========================================================
+           RESET & GLOBAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: #f7f5f1;
+            color: #20242a;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --background: #f7f5f1;
+            --white: #ffffff;
+            --text: #20242a;
+            --muted: #68717b;
+            --border: #e3ded6;
+
+            --purple: #7356d8;
+            --pink: #d55391;
+
+            --dark: #20252b;
+
+            --shadow:
+                0 20px 50px rgba(32, 36, 42, 0.08);
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(247, 245, 241, 0.94);
+
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--purple);
+        }
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 12px 18px;
+
+            border-radius: 10px;
+
+            border: 1px solid var(--text);
+
+            font-size: 14px;
+            font-weight: 800;
+
+            transition: 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-light {
+            background: white;
+            color: var(--text);
+        }
+
+        .btn-outline-white {
+            color: white;
+            border-color: white;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            padding: 115px 0 100px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            color: var(--purple);
+        }
+
+        .hero h1 {
+            margin-top: 20px;
+
+            font-size: clamp(48px, 8vw, 94px);
+
+            line-height: 0.96;
+
+            letter-spacing: -0.065em;
+        }
+
+        .gradient {
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--purple),
+                    var(--pink)
+                );
+
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero-description {
+            max-width: 760px;
+
+            margin-top: 28px;
+
+            color: var(--muted);
+
+            font-size: 20px;
+        }
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 40px;
+
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.15em;
+
+            text-transform: uppercase;
+
+            color: var(--purple);
+        }
+
+        .section-header h2 {
+            margin-top: 8px;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1;
+
+            letter-spacing: -0.05em;
+        }
+
+        .section-description {
+            max-width: 430px;
+
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1.1fr 0.9fr;
+
+            gap: 45px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+
+            color: #46505a;
+
+            font-size: 17px;
+        }
+
+        .quote {
+            padding: 38px;
+
+            background: var(--dark);
+
+            color: white;
+
+            border-radius: 22px;
+
+            font-size: 26px;
+
+            line-height: 1.3;
+        }
+
+        .quote small {
+            display: block;
+
+            margin-top: 20px;
+
+            color: #b8bec5;
+
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           CONTENT CARDS
+        ========================================================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--white);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            padding: 27px;
+
+            transition: 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .card-number {
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.12em;
+
+            color: var(--purple);
+        }
+
+        .card h3 {
+            margin: 10px 0;
+
+            font-size: 22px;
+
+            line-height: 1.15;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 22px;
+
+            padding: 30px;
+
+            transition: 0.25s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .project.featured {
+            grid-column: 1 / -1;
+
+            background: var(--dark);
+
+            color: white;
+        }
+
+        .project-category {
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            color: var(--purple);
+        }
+
+        .project.featured .project-category {
+            color: #b9a9ff;
+        }
+
+        .project h3 {
+            margin: 12px 0;
+
+            font-size: 32px;
+
+            line-height: 1.05;
+
+            letter-spacing: -0.03em;
+        }
+
+        .project p {
+            color: var(--muted);
+        }
+
+        .project.featured p {
+            color: #c9ced3;
+        }
+
+        /* =========================================================
+           TAGS
+        ========================================================= */
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 20px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+
+            border-radius: 50px;
+
+            background: #eee9ff;
+
+            color: #6246bf;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           FEATURED CASE STUDY
+        ========================================================= */
+
+        .case-study {
+            background: var(--dark);
+
+            color: white;
+
+            padding: 45px;
+
+            border-radius: 25px;
+        }
+
+        .case-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+        }
+
+        .case-study h3 {
+            margin: 12px 0;
+
+            font-size: 42px;
+
+            line-height: 1.05;
+
+            letter-spacing: -0.04em;
+        }
+
+        .case-study p {
+            color: #c9ced3;
+        }
+
+        .facts {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .fact {
+            padding: 15px;
+
+            border:
+                1px solid
+                #444b52;
+
+            border-radius: 12px;
+        }
+
+        .fact strong {
+            display: block;
+
+            margin-bottom: 4px;
+        }
+
+        .fact span {
+            color: #adb4ba;
+
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           PDF VIEWER
+        ========================================================= */
+
+        .pdf-container {
+            margin-top: 30px;
+
+            overflow: hidden;
+
+            background: white;
+
+            border-radius: 20px;
+
+            border: 1px solid var(--border);
+        }
+
+        .pdf-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 16px 20px;
+
+            border-bottom: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+
+            height: 720px;
+
+            border: none;
+        }
+
+        /* =========================================================
+           DOCUMENT PROJECTS
+        ========================================================= */
+
+        .document-note {
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #eee9ff;
+
+            border-radius: 14px;
+
+            color: #51437d;
+
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           APPROACH
+        ========================================================= */
+
+        .process {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .process-step {
+            padding-top: 15px;
+
+            border-top:
+                2px solid
+                var(--purple);
+        }
+
+        .process-step strong {
+            color: var(--purple);
+
+            font-size: 11px;
+
+            letter-spacing: 0.1em;
+        }
+
+        .process-step p {
+            margin-top: 10px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 22px;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 16px;
+        }
+
+        .skill h3 {
+            margin-bottom: 7px;
+
+            font-size: 17px;
+        }
+
+        .skill p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-box {
+            padding: 65px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eee9ff,
+                    #fff0f7
+                );
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 25px;
+        }
+
+        .contact-box h2 {
+            margin-top: 10px;
+
+            font-size: clamp(38px, 5vw, 58px);
+
+            line-height: 1;
+        }
+
+        .contact-box p {
+            max-width: 620px;
+
+            margin: 18px auto;
+
+            color: var(--muted);
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 30px 0;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .case-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project.featured {
+                grid-column: auto;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .process,
+            .skills {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-header {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .hero {
+                padding-top: 75px;
+            }
+
+            .process,
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study,
+            .contact-box {
+                padding: 28px;
+            }
+
+            .pdf-viewer {
+                height: 560px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="#top" class="logo">
+            PALAK<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#work">Work</a>
+
+            <a href="#approach">Approach</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="top">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Content Writer · Learning Content Designer
+        </div>
+
+        <h1>
+
+            Words that inform.<br>
+
+            <span class="gradient">
+                Content that engages.
+            </span>
+
+        </h1>
+
+        <p class="hero-description">
+
+            I create clear, engaging and purpose-driven content
+            across learning, workplace communication, research
+            and digital formats — combining writing, storytelling
+            and learning design.
+
+        </p>
+
+        <div class="buttons">
+
+            <a href="#work" class="btn btn-dark">
+                Explore my work
+            </a>
+
+            <a href="#contact" class="btn btn-light">
+                Let's connect
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    01 · About
+                </div>
+
+                <h2>
+                    A writer with a<br>
+                    learning mindset.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                Content becomes powerful when people can
+                understand it, connect with it and use it.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I work at the intersection of content
+                    development, learning, facilitation,
+                    corporate communication and research writing.
+                </p>
+
+                <p>
+                    My portfolio brings together learning decks,
+                    research-led writing and structured
+                    communication work — showing not just
+                    what I write, but how I organise information
+                    for an audience.
+                </p>
+
+            </div>
+
+
+            <div class="quote">
+
+                “Good content doesn't just deliver information.
+                It creates understanding — and, ideally, action.”
+
+                <small>
+                    — Palak Gulati
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SELECTED WORK
+========================================================= -->
+
+<section id="work">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    02 · Selected Work
+                </div>
+
+                <h2>
+                    Work, not just words.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                The strongest pieces get the strongest visual
+                treatment. Everything else is organised so
+                a recruiter can scan quickly and go deeper
+                when interested.
+
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- FEATURED PROJECT -->
+
+            <article class="project featured">
+
+                <div class="project-category">
+                    Featured · Learning & Training Content
+                </div>
+
+                <h3>
+                    Mastering SelfManagement
+                </h3>
+
+                <p>
+
+                    A structured learning deck focused on
+                    the meaning of self-management, essential
+                    skills, workplace caselets,
+                    self-determination and practical
+                    improvement tips.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Learning Content
+                    </span>
+
+                    <span class="tag">
+                        Presentation
+                    </span>
+
+                    <span class="tag">
+                        Caselets
+                    </span>
+
+                    <span class="tag">
+                        Self-Determination
+                    </span>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/self-management.pdf"
+                        target="_blank"
+                        class="btn btn-light"
+                    >
+                        Open full deck ↗
+                    </a>
+
+                    <a
+                        href="#featured"
+                        class="btn btn-outline-white"
+                    >
+                        See project
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ONLINE RETAIL -->
+
+            <article class="project">
+
+                <div class="project-category">
+                    Research · Long-form
+                </div>
+
+                <h3>
+                    Online Retail Marketing Environment
+                </h3>
+
+                <p>
+
+                    Research writing covering online retail,
+                    digital versus traditional marketing,
+                    online-offline integration and
+                    social media strategy.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <span class="tag">
+                        Digital Marketing
+                    </span>
+
+                    <span class="tag">
+                        Long-form
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/online-retail-marketing.docx"
+                        class="btn btn-light"
+                    >
+                        Open document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SUCCESSION RIGHTS -->
+
+            <article class="project">
+
+                <div class="project-category">
+                    Research · Policy
+                </div>
+
+                <h3>
+                    Succession Rights of Women
+                </h3>
+
+                <p>
+
+                    Research exploring tribal women's
+                    inheritance and property rights,
+                    gender equality and the Uniform
+                    Civil Code.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <span class="tag">
+                        Policy
+                    </span>
+
+                    <span class="tag">
+                        Gender & Law
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/succession-rights-women.docx"
+                        class="btn btn-light"
+                    >
+                        Open document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MEDIA VIOLENCE -->
+
+            <article class="project">
+
+                <div class="project-category">
+                    Research · Survey Insights
+                </div>
+
+                <h3>
+                    Verbal & Nonverbal Violence
+                    in Broadcast Media
+                </h3>
+
+                <p>
+
+                    Research on media violence,
+                    audience perception, psychological
+                    and behavioural effects, with
+                    quantitative and qualitative findings.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <span class="tag">
+                        Media
+                    </span>
+
+                    <span class="tag">
+                        Survey
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/verbal-and-nonverbal.docx"
+                        class="btn btn-light"
+                    >
+                        Open document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURED CASE STUDY
+========================================================= -->
+
+<section id="featured">
+
+    <div class="container">
+
+        <div class="section-number">
+            03 · Featured Case Study
+        </div>
+
+
+        <div class="case-study">
+
+            <div class="case-grid">
+
+
+                <div>
+
+                    <div class="section-number">
+                        Learning Content Project
+                    </div>
+
+                    <h3>
+                        Mastering SelfManagement
+                    </h3>
+
+                    <p>
+
+                        The deck sets learning objectives
+                        around understanding self-management,
+                        exploring essential skills and
+                        understanding self-determination.
+
+                        It then uses workplace scenarios
+                        and a framework of Competence,
+                        Autonomy and Relatedness to move
+                        the topic toward application.
+
+                    </p>
+
+
+                    <div class="tags">
+
+                        <span class="tag">
+                            Self Management
+                        </span>
+
+                        <span class="tag">
+                            Self-Awareness
+                        </span>
+
+                        <span class="tag">
+                            Self-Regulation
+                        </span>
+
+                        <span class="tag">
+                            Mastery
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="facts">
+
+
+                    <div class="fact">
+
+                        <strong>
+                            Core focus
+                        </strong>
+
+                        <span>
+
+                            Regulating behaviours,
+                            thoughts and emotions in
+                            a way that better serves
+                            you and your work.
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>
+                            Essential skills
+                        </strong>
+
+                        <span>
+
+                            Independent · Self-motivated ·
+                            Self-responsible · Staying on-track.
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>
+                            Framework
+                        </strong>
+
+                        <span>
+
+                            Competence · Autonomy · Relatedness.
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>
+                            Practical tips
+                        </strong>
+
+                        <span>
+
+                            Social support · Self-awareness ·
+                            Mastery · Self-regulation.
+
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- PDF -->
+
+            <div class="pdf-container">
+
+                <div class="pdf-header">
+
+                    <strong>
+                        Actual work sample
+                    </strong>
+
+                    <span>
+                        Source learning deck
+                    </span>
+
+                </div>
+
+                <iframe
+                    class="pdf-viewer"
+                    src="assets/self-management.pdf"
+                    title="Mastering SelfManagement learning deck"
+                >
+                </iframe>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTENT WRITING
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    04 · Content Writing
+                </div>
+
+                <h2>
+                    Writing that<br>
+                    serves a purpose.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                Different formats require different
+                approaches. My work spans research,
+                corporate communication, learning
+                content and digital writing.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    01 · RESEARCH
+                </div>
+
+                <h3>
+                    Research & Long-form Writing
+                </h3>
+
+                <p>
+
+                    Structuring information,
+                    synthesising research and
+                    developing detailed narratives.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    02 · LEARNING
+                </div>
+
+                <h3>
+                    Learning Content
+                </h3>
+
+                <p>
+
+                    Turning concepts into
+                    structured learning experiences
+                    using objectives, scenarios
+                    and practical application.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-number">
+                    03 · CORPORATE
+                </div>
+
+                <h3>
+                    Corporate Communication
+                </h3>
+
+                <p>
+
+                    Clear, audience-focused
+                    communication designed
+                    to inform and engage.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DOCUMENT PROJECTS
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    05 · Research Portfolio
+                </div>
+
+                <h2>
+                    Research that<br>
+                    goes deeper.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                These projects demonstrate the ability
+                to research, structure and communicate
+                complex subjects across different domains.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- ONLINE RETAIL -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    DIGITAL MARKETING
+                </div>
+
+                <h3>
+                    Online Retail Marketing Environment
+                </h3>
+
+                <p>
+
+                    An empirical research piece exploring
+                    knowledge and creativity in an online
+                    retail marketing environment.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Digital Marketing
+                    </span>
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/online-retail-marketing.docx"
+                        class="btn btn-light"
+                    >
+                        Read document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- SUCCESSION -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    LAW · GENDER · POLICY
+                </div>
+
+                <h3>
+                    Succession Rights of Women
+                </h3>
+
+                <p>
+
+                    Research focused on succession rights,
+                    tribal women, inheritance and property
+                    rights and the Uniform Civil Code.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Gender
+                    </span>
+
+                    <span class="tag">
+                        Law
+                    </span>
+
+                    <span class="tag">
+                        Policy
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/succession-rights-women.docx"
+                        class="btn btn-light"
+                    >
+                        Read document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MEDIA -->
+
+            <article class="card">
+
+                <div class="card-number">
+                    MEDIA · SURVEY
+                </div>
+
+                <h3>
+                    Verbal & Nonverbal Violence
+                    in Broadcast Media
+                </h3>
+
+                <p>
+
+                    Research examining broadcast media,
+                    violence, audience perception and
+                    psychological and behavioural effects.
+
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Media Studies
+                    </span>
+
+                    <span class="tag">
+                        Survey
+                    </span>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="assets/verbal-and-nonverbal.docx"
+                        class="btn btn-light"
+                    >
+                        Read document ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <div class="document-note">
+
+            <strong>
+                Portfolio note:
+            </strong>
+
+            These research documents are presented as
+            evidence of research, writing, structuring
+            and communication ability. Visitors can
+            open the original documents when they want
+            to explore the complete work.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     APPROACH
+========================================================= -->
+
+<section id="approach">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    06 · My Approach
+                </div>
+
+                <h2>
+                    Content with<br>
+                    a purpose.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="process">
+
+
+            <div class="process-step">
+
+                <strong>
+                    01 · UNDERSTAND
+                </strong>
+
+                <p>
+
+                    Identify the audience,
+                    context and desired outcome.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>
+                    02 · RESEARCH
+                </strong>
+
+                <p>
+
+                    Gather and organise the
+                    information that matters.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>
+                    03 · STRUCTURE
+                </strong>
+
+                <p>
+
+                    Create a logical flow using
+                    the right content format.
+
+                </p>
+
+            </div>
+
+
+            <div class="process-step">
+
+                <strong>
+                    04 · WRITE
+                </strong>
+
+                <p>
+
+                    Choose the right tone,
+                    language and level of detail.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    07 · Skills
+                </div>
+
+                <h2>
+                    What I bring.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <h3>
+                    Content
+                </h3>
+
+                <p>
+
+                    Writing · Research · Storytelling ·
+                    Copywriting · Editing · Structuring
+
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    Learning
+                </h3>
+
+                <p>
+
+                    Learning Content · Training Material ·
+                    Case Studies · Activities
+
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+
+                    Corporate Communication ·
+                    Internal Communication ·
+                    Employee Engagement
+
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    Tools
+                </h3>
+
+                <p>
+
+                    Canva · PowerPoint · Word · Excel ·
+                    ChatGPT · Canva AI
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-number">
+                08 · Let's Connect
+            </div>
+
+            <h2>
+                Have a story to tell?
+            </h2>
+
+            <p>
+
+                Whether it's a learning experience,
+                research-led content or a communication
+                project that needs the right words,
+                let's work on it.
+
+            </p>
+
+
+            <div class="contact-buttons">
+
+
+                <!-- CHANGE THIS EMAIL -->
+
+                <a
+                    href="mailto:YOUR_EMAIL@example.com"
+                    class="btn btn-dark"
+                >
+                    Email me
+                </a>
+
+
+                <!-- CHANGE THIS LINK -->
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    class="btn btn-light"
+                >
+                    LinkedIn
+                </a>
+
+
+            </div>
+
+
+            <p style="font-size:12px">
+
+                Replace the email address and LinkedIn
+                link before publishing.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Palak Gulati ·
+        Content Writer & Learning Content Designer
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
